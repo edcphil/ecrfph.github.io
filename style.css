@@ -149,3 +149,8 @@ footer {
   padding: 6px 12px;
   border-radius: 6px;
 }
+
+.logo img {
+  height: 70px;  /* Dito mo inaadjust yung laki */
+  width: auto;   /* Para di pumangit yung logo */
+}
