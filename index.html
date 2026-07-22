@@ -3,47 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EC Rattan Furniture Philippines</title>
+  <title>EC Rattan Furniture</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- 1. LOGO SA TAAS -->
-  <header>
-    <img src="logo.png" alt="EC Rattan Logo" class="top-logo">
-  </header>
-
-  <!-- 2. HERO SECTION NA MAY BACKGROUND -->
-  <section class="hero">
-    <h1>Handcrafted Rattan <br> Furniture</h1>
-    <p>Timeless Designs, Modern Comfort</p>
-    <a href="#products" class="shopBtn">Shop Now</a>
-  </section>
-
-  <!-- 3. PRODUCTS SECTION -->
-  <section id="products" class="gallery">
-    <h2>Our Bestsellers</h2>
-    <img src="rattan2.jpg" alt="Rattan Products">
-  </section>
-
-  <!-- 4. CONTACT SECTION -->
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>📱 0917-123-4567</p>
-    <p>📍 Iloilo City, Philippines</p>
-  </section>
-
-  <!-- 5. BOTTOM MENU -->
-  <nav class="bottom-nav">
-    <a href="#"><span>🏠</span>Home</a>
-    <a href="#products"><span>🛍️</span>Store</a>
-    <a href="tel:09171234567"><span>📱</span>Call Us</a>
-    <a href="#contact"><span>✉️</span>Contact</a>
+  <!-- NAVIGATION MENU -->
+  <nav class="navbar">
+    <img src="logo.png" alt="EC Rattan Logo" class="nav-logo">
+    <ul class="nav-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
 
-  <!-- ITO NA YUNG JAVA/JAVASCRIPT -->
+  <!-- HERO BANNER -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Bring Nature Into Your Home</h2>
+      <p>Quality rattan furniture, made with care</p>
+      <a href="#products" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- ABOUT US -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>EC Rattan Furniture creates handcrafted rattan pieces that blend tradition and modern design. 
+    Each piece is made by skilled artisans to bring warmth and elegance to your home.</p>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="chair1.jpg" alt="Rattan Chair">
+        <h3>Rattan Lounge Chair</h3>
+        <p>Elegant and comfortable</p>
+      </div>
+      <div class="product">
+        <img src="table1.jpg" alt="Rattan Table">
+        <h3>Rattan Dining Table</h3>
+        <p>Perfect for family gatherings</p>
+      </div>
+      <div class="product">
+        <img src="sofa1.jpg" alt="Rattan Sofa">
+        <h3>Rattan Sofa Set</h3>
+        <p>Modern and durable</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service">
+        <h3>🪑 Custom Furniture</h3>
+        <p>We make furniture based on your design and size.</p>
+      </div>
+      <div class="service">
+        <h3>🚚 Delivery</h3>
+        <p>We deliver to your doorstep, safe and on time.</p>
+      </div>
+      <div class="service">
+        <h3>🔧 After-Sales Support</h3>
+        <p>We help with repairs and maintenance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p>📞 / WhatsApp: 0920 796 7604</p>
+      <p>📧 ecrattanfurniture@gmail.com</p>
+      <p>📘 Facebook: @ecrfph</p>
+      <p>📍 Mabinay, Negros Oriental 6207 - Babaw Petron, Likod ABC Learning Center</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 EC Rattan Furniture. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JAVASCRIPT FOR SMOOTH SCROLL -->
   <script>
-    // Smooth Scroll - para dahan2 pag click ng menu
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -51,11 +102,6 @@
           behavior: 'smooth'
         });
       });
-    });
-
-    // Pop-up pag click ng Shop Now
-    document.querySelector('.shopBtn').addEventListener('click', function(e) {
-      // aalisin yung default para mag smooth scroll muna
     });
   </script>
 
