@@ -1,17 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+body {
+  background: #FFFDF7;
+  color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-logo {
+  width: 70px;
+}
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.nav-menu li a {
+  text-decoration: none;
+  color: #8B4513;
+  font-weight: bold;
+  font-size: 16px;
+}
+.nav-menu li a:hover {
+  color: #6b3410;
+}
+
+/* HERO */
+.hero {
+  background-image: url('hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.hero-text {
+  background: rgba(0,0,0,0.5);
+  padding: 40px;
+  border-radius: 10px;
+}
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #8B4513;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.btn:hover {
+  background: #6b3410;
+}
+
+/* SECTIONS */
+.about, .products, .services {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.about h2, .products h2, .services h2 {
+  font-size: 32px;
+  color: #8B4513;
+  margin-bottom: 30px;
+}
+
+/* PRODUCTS */
+.product-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.product {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.product img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* SERVICES */
+.service-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.service {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.service h3 {
+  color: #8B4513;
+  margin-bottom: 10px;
+}
+
 /* CONTACT */
 .contact {
   background: #F5E6D3;
   padding: 60px 20px;
   text-align: center;
 }
-.contact h2 {
-  font-size: 32px;
-  color: #8B4513;
-  margin-bottom: 30px;
-}
 .contact-info p {
   font-size: 18px;
   margin: 12px 0;
   color: #333;
-  line-height: 1.6;
+}
+
+/* FOOTER */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
