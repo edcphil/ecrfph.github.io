@@ -1,4 +1,4 @@
-
+  
 
 * {
   margin: 0;
@@ -13,9 +13,13 @@ body {
 }
 
 header {
-  background-color: #8B4513; /* Brown for rattan */
-  color: #FFF8F0; /* Beige text */
-  }
+  background: #8B4513;
+  color: #fff8f0;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
 nav {
   display: flex;
@@ -149,8 +153,15 @@ footer {
   padding: 6px 12px;
   border-radius: 6px;
 }
+.logo {
+  display: block;
+  margin: 0 auto;     
+  height: auto;
+  max-width: 200px;    
+  padding: 20px 0;     
+}
 
-.logo img {
-  height: 70px;  /* Dito mo inaadjust yung laki */
-  width: auto;   /* Para di pumangit yung logo */
+header {
+  background-color: #FFF8F0; 
+  text-align: center;
 }
