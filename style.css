@@ -1,26 +1,17 @@
-/* PRODUCTS SECTION */
-.gallery {
-  padding: 40px 20px;
-  text-align: center;
-}
-.gallery h2 {
-  font-size: 28px;
-  color: #8B4513;
-  margin-bottom: 20px;
-}
-.gallery img {
-  width: 100%;
-  max-width: 800px;
-  border-radius: 10px;
-}
-
-/* CONTACT SECTION */
+/* CONTACT */
 .contact {
-  padding: 50px 20px;
+  background: #F5E6D3;
+  padding: 60px 20px;
   text-align: center;
-  background: #FFF8F0;
 }
 .contact h2 {
+  font-size: 32px;
   color: #8B4513;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+}
+.contact-info p {
+  font-size: 18px;
+  margin: 12px 0;
+  color: #333;
+  line-height: 1.6;
 }
