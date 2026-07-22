@@ -13,13 +13,9 @@ body {
 }
 
 header {
-  background: #8B4513;
-  color: #fff8f0;
-  padding: 15px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+  background-color: #8B4513; /* Brown for rattan */
+  color: #FFF8F0; /* Beige text */
+  }
 
 nav {
   display: flex;
