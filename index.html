@@ -6,6 +6,32 @@
   <title>EC Rattan Furniture | Handcrafted Rattan</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
+<script>
+  // Open and Close Modal
+  function openQuoteForm(product) {
+    document.getElementById('quoteModal').style.display = 'block';
+    document.getElementById('productName').innerText = product;
+    document.getElementById('product').value = product;
+  }
+  function closeQuoteForm() {
+    document.getElementById('quoteModal').style.display = 'none';
+  }
+
+  // Handle Form Submit - sends to email
+  document.getElementById('quoteForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    let formData = new FormData(this);
+    let subject = "Quote Request: " + formData.get('product');
+    let body = `New Quote Request%0D%0A%0D%0AProduct: ${formData.get('product')}%0D%0AName: ${formData.get('name')}%0D%0AEmail: ${formData.get('email')}%0D%0APhone: ${formData.get('phone')}%0D%0AMessage: ${formData.get('message')}`;
+    
+    window.location.href = `mailto:ecrattanfurniture@gmail.com?subject=${subject}&body=${body}`;
+    alert("Thank you! Your request will be sent to our email.");
+    closeQuoteForm();
+    this.reset();
+  });
+</script>
+
 <body>
 
   <!-- NAVIGATION / HEADER -->
@@ -39,29 +65,7 @@
     </div>
   </section>
 
-  <!-- PRODUCTS -->
-  <section id="products" class="products">
-    <div class="container">
-      <h2>Our Products</h2>
-      <div class="product-grid">
-        <div class="product">
-          <img src="chair1.jpg" alt="Rattan Chair">
-          <h3>Rattan Lounge Chair</h3>
-          <p>Elegant and comfortable for your living room</p>
-        </div>
-        <div class="product">
-          <img src="table1.jpg" alt="Rattan Table">
-          <h3>Rattan Dining Table</h3>
-          <p>Perfect for family gatherings and events</p>
-        </div>
-        <div class="product">
-          <img src="sofa1.jpg" alt="Rattan Sofa">
-          <h3>Rattan Sofa Set</h3>
-          <p>Modern and durable for any space</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- SERVICES -->
   <section id="services" class="services">
@@ -84,6 +88,62 @@
     </div>
   </section>
 
+  <!-- PRODUCTS -->
+  <section id="products" class="products">
+    <div class="container">
+      <h2>Our Products</h2>
+      <div class="product-grid">
+        
+        <div class="product">
+          <img src="chair1.jpg" alt="Rattan Chair">
+          <h3>Rattan Lounge Chair</h3>
+          <p>Elegant and comfortable for your living room</p>
+          <button class="quote-btn" onclick="openQuoteForm('Rattan Lounge Chair')">Request a Quote</button>
+        </div>
+
+        <div class="product">
+          <img src="table1.jpg" alt="Rattan Table">
+          <h3>Rattan Dining Table</h3>
+          <p>Perfect for family gatherings and events</p>
+          <button class="quote-btn" onclick="openQuoteForm('Rattan Dining Table')">Request a Quote</button>
+        </div>
+
+        <div class="product">
+          <img src="sofa1.jpg" alt="Rattan Sofa">
+          <h3>Rattan Sofa Set</h3>
+          <p>Modern and durable for any space</p>
+          <button class="quote-btn" onclick="openQuoteForm('Rattan Sofa Set')">Request a Quote</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE POPUP FORM -->
+  <div id="quoteModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeQuoteForm()">&times;</span>
+      <h2>Request a Quote</h2>
+      <p>Product: <b id="productName"></b></p>
+      <form id="quoteForm">
+        <input type="hidden" id="product" name="product">
+        <label>Your Name</label>
+        <input type="text" name="name" required>
+        
+        <label>Email</label>
+        <input type="email" name="email" required>
+        
+        <label>Phone / WhatsApp</label>
+        <input type="tel" name="phone" required>
+        
+        <label>Message - Size, Color, Quantity</label>
+        <textarea name="message" rows="4" placeholder="Ex: Brown, 6 seater, Need by December" required></textarea>
+        
+        <button type="submit" class="submit-btn">Send Request</button>
+      </form>
+    </div>
+  </div>
+  
   <!-- CONTACT - ALL LINKS ARE CLICKABLE -->
   <section id="contact" class="contact">
     <div class="container">
