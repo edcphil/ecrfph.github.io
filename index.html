@@ -3,84 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EC Rattan Furniture - Natural. Stylish. Durable.</title>
+  <title>EC Rattan Furniture Philippines</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- 1. LOGO SA TAAS -->
   <header>
-    <img src="wa_image_3079016840810505966" alt="EC Rattan Furniture Logo" class="logo">
-  </header>
-  
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <img src="logo.png" alt="EC Rattan Logo" class="top-logo">
   </header>
 
-  <section id="home" class="hero">
-    <h1>Natural. Stylish. Durable.</h1>
-    <p>Handcrafted Rattan Furniture for your home and business</p>
-    <p class="tagline">Ships nationwide | Made to order</p>
-    <button id="ctaBtn">View Products</button>
+  <!-- 2. HERO SECTION NA MAY BACKGROUND -->
+  <section class="hero">
+    <h1>Handcrafted Rattan <br> Furniture</h1>
+    <p>Timeless Designs, Modern Comfort</p>
+    <a href="#products" class="shopBtn">Shop Now</a>
   </section>
 
-  <section id="products">
-    <h2>Best Sellers</h2>
-    <div class="product-grid">
-      <div class="card">
-        <img src="https://via.placeholder.com/300x200/D2B48C/fff?text=Rattan+Chair" alt="Rattan Chair">
-        <h3>Rattan Dining Chair</h3>
-        <p>Perfect for modern Filipino homes</p>
-        <button class="inquireBtn">Inquire Now</button>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x200/A0522D/fff?text=Rattan+Sofa" alt="Rattan Sofa">
-        <h3>Rattan Sofa Set</h3>
-        <p>Cozy and durable for your living room</p>
-        <button class="inquireBtn">Inquire Now</button>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x200/8B4513/fff?text=Rattan+Table" alt="Rattan Table">
-        <h3>Rattan Coffee Table</h3>
-        <p>Minimalist design, solid quality</p>
-        <button class="inquireBtn">Inquire Now</button>
-      </div>
-    </div>
+  <!-- 3. PRODUCTS SECTION -->
+  <section id="products" class="gallery">
+    <h2>Our Bestsellers</h2>
+    <img src="rattan2.jpg" alt="Rattan Products">
   </section>
 
-  <section id="about">
-    <h2>About EC Rattan Furniture</h2>
-    <p>We handcraft every piece of rattan furniture with natural materials and skilled artisans. Our designs are made to fit Filipino homes with style and durability. Proudly made in Mabinay, Negros Oriental 🇵🇭</p>
+  <!-- 4. CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>📱 0917-123-4567</p>
+    <p>📍 Iloilo City, Philippines</p>
   </section>
 
-  <section id="contact">
-    <h2>Get in Touch</h2>
-    <div class="contact-info">
-      <p>📞 <a href="tel:09207967604">0920 796 7604</a></p>
-      <p>📧 <a href="mailto:ecrattanfurniture@gmail.com">ecrattanfurniture@gmail.com</a></p>
-      <p>📘 Facebook: <a href="https://facebook.com/ecrfph" target="_blank">@ecrfph</a></p>
-      <p>📍 Mabinay, Negros Oriental 6207 (NIR) - Above Petron, Behind ABC Learning Center</p>
-      <p><b>Ships nationwide | Made to order</b></p>
-    </div>
-    
-    <form id="contactForm">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <input type="text" placeholder="Product Interested In" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Inquiry</button>
-    </form>
-    <p id="formMsg"></p>
-  </section>
+  <!-- 5. BOTTOM MENU -->
+  <nav class="bottom-nav">
+    <a href="#"><span>🏠</span>Home</a>
+    <a href="#products"><span>🛍️</span>Store</a>
+    <a href="tel:09171234567"><span>📱</span>Call Us</a>
+    <a href="#contact"><span>✉️</span>Contact</a>
+  </nav>
 
-  <footer>
-    <p>© 2026 EC Rattan Furniture. Proudly Made in the Philippines.</p>
-  </footer>
+  <!-- ITO NA YUNG JAVA/JAVASCRIPT -->
+  <script>
+    // Smooth Scroll - para dahan2 pag click ng menu
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
 
-  <script src="script.js"></script>
+    // Pop-up pag click ng Shop Now
+    document.querySelector('.shopBtn').addEventListener('click', function(e) {
+      // aalisin yung default para mag smooth scroll muna
+    });
+  </script>
+
 </body>
 </html>
