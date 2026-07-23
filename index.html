@@ -1,181 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EC Rattan Furniture | Handcrafted Rattan</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC Rattan Furniture</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
-<script>
-  // Open and Close Modal
-  function openQuoteForm(product) {
-    document.getElementById('quoteModal').style.display = 'block';
-    document.getElementById('productName').innerText = product;
-    document.getElementById('product').value = product;
-  }
-  function closeQuoteForm() {
-    document.getElementById('quoteModal').style.display = 'none';
-  }
-
-  // Handle Form Submit - sends to email
-  document.getElementById('quoteForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    let formData = new FormData(this);
-    let subject = "Quote Request: " + formData.get('product');
-    let body = `New Quote Request%0D%0A%0D%0AProduct: ${formData.get('product')}%0D%0AName: ${formData.get('name')}%0D%0AEmail: ${formData.get('email')}%0D%0APhone: ${formData.get('phone')}%0D%0AMessage: ${formData.get('message')}`;
-    
-    window.location.href = `mailto:ecrattanfurniture@gmail.com?subject=${subject}&body=${body}`;
-    alert("Thank you! Your request will be sent to our email.");
-    closeQuoteForm();
-    this.reset();
-  });
-</script>
-
 <body>
 
-  <!-- NAVIGATION / HEADER -->
-  <nav class="navbar">
-    <img src="logo.png" alt="EC Rattan Logo" class="nav-logo">
-    <ul class="nav-menu">
-      <li><a href="#">Home</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<header>
+    <div class="container nav">
+        <h2 class="logo">EC Rattan Furniture</h2>
 
-  <!-- HERO BANNER -->
-  <section class="hero">
-    <div class="hero-text">
-      <h2>Bring Nature Into Your Home</h2>
-      <p>Handcrafted Rattan Furniture from Mabinay, Negros Oriental</p>
-      <a href="#products" class="btn">Shop Collection</a>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+        </nav>
+
+        <a href="#contact" class="btn">Get a Quote</a>
     </div>
-  </section>
+</header>
 
-  <!-- ABOUT US -->
-  <section id="about" class="about">
+<section class="hero" id="home">
+    <div class="container hero-content">
+        <h1>Beautiful Handcrafted Rattan Furniture</h1>
+
+        <p>
+            High-quality handcrafted furniture perfect for homes,
+            resorts, cafés, hotels, and businesses.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#products" class="btn">View Products</a>
+            <a href="#contact" class="btn-outline">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<section id="products" class="section">
     <div class="container">
-      <h2>About Us</h2>
-      <p>EC Rattan Furniture creates handcrafted rattan pieces that blend tradition and modern design. 
-      Each piece is made by skilled artisans to bring warmth and elegance to your home. 
-      Quality and sustainability are at the heart of everything we do.</p>
+        <h2>Our Products</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Living Room</h3>
+                <p>Elegant handcrafted rattan sofas, chairs and tables.</p>
+            </div>
+
+            <div class="card">
+                <h3>Dining Sets</h3>
+                <p>Beautiful dining furniture for homes and restaurants.</p>
+            </div>
+
+            <div class="card">
+                <h3>Bedroom</h3>
+                <p>Premium beds, cabinets and side tables.</p>
+            </div>
+
+            <div class="card">
+                <h3>Outdoor Furniture</h3>
+                <p>Durable furniture designed for gardens and resorts.</p>
+            </div>
+
+        </div>
     </div>
-  </section>
+</section>
 
-  
-
-  <!-- SERVICES -->
-  <section id="services" class="services">
+<section id="services" class="section light">
     <div class="container">
-      <h2>Our Services</h2>
-      <div class="service-grid">
-        <div class="service">
-          <h3>🪑 Custom Furniture</h3>
-          <p>We make furniture based on your design, size, and color preference.</p>
-        </div>
-        <div class="service">
-          <h3>🚚 Delivery</h3>
-          <p>We deliver to your doorstep across Negros Oriental. Safe and on time.</p>
-        </div>
-        <div class="service">
-          <h3>🔧 After-Sales Support</h3>
-          <p>We help with repairs and maintenance to make your furniture last.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- PRODUCTS -->
-  <section id="products" class="products">
+        <h2>Our Services</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Custom Furniture</h3>
+                <p>Made according to your preferred design.</p>
+            </div>
+
+            <div class="card">
+                <h3>Furniture Repair</h3>
+                <p>Professional repair and restoration services.</p>
+            </div>
+
+            <div class="card">
+                <h3>Wholesale & Retail</h3>
+                <p>Supplying homes, resorts and commercial spaces.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="about" class="section">
     <div class="container">
-      <h2>Our Products</h2>
-      <div class="product-grid">
-        
-        <div class="product">
-          <img src="chair1.jpg" alt="Rattan Chair">
-          <h3>Rattan Lounge Chair</h3>
-          <p>Elegant and comfortable for your living room</p>
-          <button class="quote-btn" onclick="openQuoteForm('Rattan Lounge Chair')">Request a Quote</button>
-        </div>
 
-        <div class="product">
-          <img src="table1.jpg" alt="Rattan Table">
-          <h3>Rattan Dining Table</h3>
-          <p>Perfect for family gatherings and events</p>
-          <button class="quote-btn" onclick="openQuoteForm('Rattan Dining Table')">Request a Quote</button>
-        </div>
+        <h2>About Us</h2>
 
-        <div class="product">
-          <img src="sofa1.jpg" alt="Rattan Sofa">
-          <h3>Rattan Sofa Set</h3>
-          <p>Modern and durable for any space</p>
-          <button class="quote-btn" onclick="openQuoteForm('Rattan Sofa Set')">Request a Quote</button>
-        </div>
+        <p class="about-text">
+            EC Rattan Furniture is a trusted manufacturer and supplier of
+            handcrafted rattan furniture located in Mabinay,
+            Negros Oriental. We are committed to creating elegant,
+            durable, and high-quality furniture for homes,
+            resorts, hotels, restaurants, and businesses.
+        </p>
 
-      </div>
     </div>
-  </section>
+</section>
 
-  <!-- QUOTE POPUP FORM -->
-  <div id="quoteModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeQuoteForm()">&times;</span>
-      <h2>Request a Quote</h2>
-      <p>Product: <b id="productName"></b></p>
-      <form id="quoteForm">
-        <input type="hidden" id="product" name="product">
-        <label>Your Name</label>
-        <input type="text" name="name" required>
-        
-        <label>Email</label>
-        <input type="email" name="email" required>
-        
-        <label>Phone / WhatsApp</label>
-        <input type="tel" name="phone" required>
-        
-        <label>Message - Size, Color, Quantity</label>
-        <textarea name="message" rows="4" placeholder="Ex: Brown, 6 seater, Need by December" required></textarea>
-        
-        <button type="submit" class="submit-btn">Send Request</button>
-      </form>
-    </div>
-  </div>
-  
-  <!-- CONTACT - ALL LINKS ARE CLICKABLE -->
-  <section id="contact" class="contact">
+<section id="contact" class="section light">
+
     <div class="container">
-      <h2>Contact Us</h2>
-      <div class="contact-info">
-        <p>📞 / WhatsApp: <a href="tel:09207967604">0920 796 7604</a></p>
-        <p>📧 <a href="mailto:ecrattanfurniture@gmail.com">ecrattanfurniture@gmail.com</a></p>
-        <p>📘 <a href="https://facebook.com/ecrfph" target="_blank">Facebook: @ecrfph</a></p>
-        <p>📸 <a href="https://instagram.com/ecrfph" target="_blank">Instagram: @ecrfph</a></p>
-        <p>🎵 <a href="https://tiktok.com/@ecrfph" target="_blank">TikTok: @ecrfph</a></p>
-        <p>🛒 <a href="https://carousell.ph/u/ecrfph" target="_blank">Carousell: @ecrfph</a></p>
-        <p>📍 Mabinay, Negros Oriental 6207 - Above Petron, Behind ABC Learning Center</p>
-      </div>
+
+        <h2>Contact Us</h2>
+
+        <div class="contact-grid">
+
+            <div>
+                <h3>Phone / WhatsApp</h3>
+                <p>0920 796 7604</p>
+
+                <h3>Email</h3>
+                <p>ecrattanfurniture@gmail.com</p>
+
+                <h3>Address</h3>
+                <p>
+                    Mabinay, Negros Oriental 6207 NIR<br>
+                    Above Petron<br>
+                    Behind ABC Learning Center
+                </p>
+            </div>
+
+            <div>
+                <h3>Follow Us</h3>
+
+                <p>Facebook: @ecrfph</p>
+                <p>Carousell: @ecrfph</p>
+                <p>TikTok: @ecrfph</p>
+                <p>Instagram: @ecrfph</p>
+            </div>
+
+        </div>
+
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 EC Rattan Furniture. All Rights Reserved.</p>
-  </footer>
+</section>
 
-  <script>
-    // Smooth scroll when clicking menu links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
+<footer>
+
+    <div class="container">
+        © 2026 EC Rattan Furniture. All Rights Reserved.
+    </div>
+
+</footer>
 
 </body>
 </html>
